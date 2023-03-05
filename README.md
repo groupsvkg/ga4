@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Google Analytics
 
-## Getting Started
+## Project Setup
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Create nextjs project - `npx create-next-app@latest --ts`
+- Create `.nvmrc` and `.npmrc` for engine locking
+- Update `.eslintrc.json`
+- Run `npm run lint`
+- Add `prettier` package - `npm install -D prettier`
+- Create `.prettierignore`
+- Create `.prettierrc`
+- Update `package.json` script - `"prettier": "prettier --write ."`
+- Run `npm run prettier`
+- Add `husky` package - `npm add -D husky`
+- Install `husky` - `npx husky install`
+- Add `husky` pre-commit commands
+  - `npx husky add .husky/pre-commit "npm run lint"`
+  - `npx husky add .husky/pre-push "npm run build"`
+- Update `package.json` to include `"prepare": "husky install"`
+- Add commit lint packages - `npm add -D @commitlint/config-conventional @commitlint/cli`
+- Create and update `commitlint.config.js`
+- Enable commit lint - `npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'`
+- Create `.vscode` folder
+  - Create and update `setting.json`
+  - Create and update `launch.json` for client, server, or fullstack debugging
+- Install `cross-env` package - `npm install -D cross-env`
+- Update `package.json` dev script - `"dev": "cross-env  NODE_OPTIONS='--inspect' next dev"`
+- Install `storybook` package - `npx sb init --builder webpack5`
+- Run `npm install`
+- Run `npm run storybook`
+- Add `tailwindcss`
+  - `npm install -D tailwindcss postcss autoprefixer`
+  - `npx tailwindcss init -p`
+  - Update `tailwind.config.js`
+  - Update `globals.css`
+  - Run `npm run dev`
+- Install `redux` packages - `npm install @reduxjs/toolkit react-redux`
+- Add `Google Analytics` package - `npm install nextjs-google-analytics`
