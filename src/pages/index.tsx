@@ -33,7 +33,7 @@ export default function Home() {
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           >
             <h1 className="text-xl text-green-800 font-bold mb-4">
-              Trigger Custom Event
+              Trigger GA4 Custom Event
             </h1>
             <div className="mb-4">
               <label
