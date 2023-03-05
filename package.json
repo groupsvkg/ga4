@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=14.21.3",
+    "node": ">=18.13.0",
     "yarn": "please-use-npm",
-    "npm": ">=9.5.1"
+    "npm": ">=8.19.3"
   },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
